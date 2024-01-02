@@ -1,0 +1,6 @@
+@LearnIMemoryCache_HostAddress = http://localhost:5216
+
+GET {{LearnIMemoryCache_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
