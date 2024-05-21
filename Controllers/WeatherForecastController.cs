@@ -36,6 +36,13 @@ namespace LearnIMemoryCache.Controllers
         [HttpGet("SetData")]
         public ActionResult SetData()
         {
+            //Generate Reset Password Token always unique
+            //var resetToken = Utils.GenerateRandomNumberAsString(6);
+            //while (_memoryCache.TryGetValue(resetToken, out string? tokenValue) && tokenValue != null)
+            //{
+            //    resetToken = Utils.GenerateRandomNumberAsString(6);
+            //}
+            //_memoryCache.Set(resetToken, user.Id, DateTimeOffset.Now.AddMinutes(5));
             string key = "token";
             string value = "token123";
             _memoryCache.Set(key, value, DateTimeOffset.Now.AddMinutes(5));
